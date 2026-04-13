@@ -5,7 +5,7 @@ Checklist:
 – If so, who else is in your group?
    N/A
 – What programming language are you selecting? Which version?
-  Java SDK 
+  Java openjdk version "17.0.8.1"
 – Do you have your GitHub account set up?
 yes user is ActualEmmerz
 – Do you have a public repository for your Project?
