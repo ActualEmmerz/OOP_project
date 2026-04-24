@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Travel Simulation Project Started");
+        TravelRoute route = new TravelRoute();
+        //test locations
+        route.addStop(new Location("Chicago"));
+        route.addStop(new Location("London"));
+        route.addStop(new Location("Paris"));
     }
 }
