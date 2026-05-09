@@ -23,3 +23,17 @@ public class TravelSimulationEngine {
     ) {
 
         ArrayList<Location> stops = route.getStops();
+         System.out.println(
+                "Simulation using: " +
+                strategy.getTransportationType()
+        );
+
+        for (int i = 0; i < stops.size() - 1; i++) {
+
+            Location current = stops.get(i);
+            Location next = stops.get(i + 1);
+
+            strategy.travel(current, next);
+        }
+    }
+}
