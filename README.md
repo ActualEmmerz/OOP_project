@@ -53,3 +53,47 @@ Each pattern will be implemented in a way that is actually used in the program, 
 3. Java Swing (optional, for simple GUI)
 4. JSON library (optional) for saving/loading routes
 5. Java Time API for handling schedules and timing
+
+
+
+## Current Sprint Progress
+
+For this sprint, I implemented two major design patterns into the project:
+
+1. Strategy Pattern
+2. Factory Pattern
+3. Singleton Pattern
+4. Builder Pattern
+
+The Strategy Pattern is used to support different transportation methods such as flights and trains. Each transportation type has its own class that implements the TransportationStrategy interface.
+
+The Factory Pattern is used to create transportation objects without directly creating them in Main.java. This keeps object creation organized and scalable.
+
+The Singleton Pattern is used in the TravelSimulationEngine so the program only uses one simulation engine object throughout execution.
+
+The Builder Pattern is used in TravelRoute to simplify route creation with multiple travel stops.
+
+## Planned Final Submission
+
+For the final submission, I want to demonstrate:
+
+- Building complex international travel routes
+- Multiple transportation methods
+- Realistic travel event simulations
+- Delay and missed connection systems
+- Passenger status tracking
+- Better route output formatting
+- Possibly a basic GUI using Java Swing
+
+The final version should simulate a realistic travel experience where the user can create routes and watch the simulation play out step-by-step.
+
+## Problems / Challenges
+
+Some challenges I currently face include:
+
+- Designing the project structure early enough to avoid large refactoring later
+- Making design patterns interact correctly together
+- Keeping the simulation realistic while still maintaining readable code
+- Planning future features without overcomplicating the current sprint
+
+Another challenge is deciding how detailed the simulation should become while still staying manageable for the scope of the course project.
