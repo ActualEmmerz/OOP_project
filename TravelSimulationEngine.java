@@ -19,11 +19,13 @@ public class TravelSimulationEngine {
 
     public void runSimulation(
             TravelRoute route,
-            TransportationStrategy strategy
+            TransportationStrategy strategy,
+            TravelEventManager manager
     ) {
 
         ArrayList<Location> stops = route.getStops();
-         System.out.println(
+
+        System.out.println(
                 "Simulation using: " +
                 strategy.getTransportationType()
         );
@@ -34,6 +36,11 @@ public class TravelSimulationEngine {
             Location next = stops.get(i + 1);
 
             strategy.travel(current, next);
+
+            manager.notifyObservers(
+                    "Arrived at " +
+                    next.getName()
+            );
         }
     }
 }

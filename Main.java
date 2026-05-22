@@ -1,4 +1,5 @@
 public class Main {
+
     public static void main(String[] args) {
 
         // Builder Pattern
@@ -14,21 +15,48 @@ public class Main {
 
         System.out.println();
 
-        // Factory Pattern
+        // Factory Method Pattern
+        TransportationCreator flightCreator =
+                new FlightCreator();
+
+        TransportationCreator trainCreator =
+                new TrainCreator();
+
         TransportationStrategy flight =
-                TransportationFactory.createTransportation("flight");
+                flightCreator.createTransportation();
 
         TransportationStrategy train =
-                TransportationFactory.createTransportation("train");
+                trainCreator.createTransportation();
+
+        // Decorator Pattern
+        TransportationStrategy delayedFlight =
+                new DelayDecorator(flight);
+
+        // Observer Pattern
+        Passenger passenger =
+                new Passenger("Sorin");
+
+        TravelEventManager manager =
+                new TravelEventManager();
+
+        manager.addObserver(passenger);
 
         // Singleton Pattern
         TravelSimulationEngine engine =
                 TravelSimulationEngine.getInstance();
 
-        engine.runSimulation(route, flight);
+        engine.runSimulation(
+                route,
+                delayedFlight,
+                manager
+        );
 
         System.out.println();
 
-        engine.runSimulation(route, train);
+        engine.runSimulation(
+                route,
+                train,
+                manager
+        );
     }
 }
