@@ -75,15 +75,17 @@ The Builder Pattern is used in TravelRoute to simplify route creation with multi
 
 ## Planned Final Submission
 
-For the final submission, I want to demonstrate:
+## Planned Final Submission
 
-- Building complex international travel routes
-- Multiple transportation methods
-- Realistic travel event simulations
-- Delay and missed connection systems
-- Passenger status tracking
-- Better route output formatting
-- Possibly a basic GUI using Java Swing
+For the final submission, I want the project to demonstrate:
+
+- Multiple transportation systems
+- Realistic route planning
+- Passenger event notifications
+- Delays and travel conditions
+- Route simulation output
+- Possible GUI support using Java Swing
+- Expanded travel event systems
 
 The final version should simulate a realistic travel experience where the user can create routes and watch the simulation play out step-by-step.
 
@@ -95,5 +97,12 @@ Some challenges I currently face include:
 - Making design patterns interact correctly together
 - Keeping the simulation realistic while still maintaining readable code
 - Planning future features without overcomplicating the current sprint
+- - Making all design patterns interact correctly together
+- Preventing the simulation classes from becoming too tightly coupled
+- Keeping the project organized as more features are added
+- Designing realistic travel event systems without overcomplicating the code
+- Creating a scalable structure for future transportation types
 
 Another challenge is deciding how detailed the simulation should become while still staying manageable for the scope of the course project.
+
+
