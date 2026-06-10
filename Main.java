@@ -34,7 +34,7 @@ public class Main {
 
         // Observer Pattern
         Passenger passenger =
-                new Passenger("Sorin");
+                new Passenger("Emma");
 
         TravelEventManager manager =
                 new TravelEventManager();
